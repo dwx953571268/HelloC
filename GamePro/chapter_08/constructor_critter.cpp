@@ -10,7 +10,7 @@ class Critter
 public:
     int m_Hunger;
     
-    Critter(int hunger = 0);       // constructor prototype
+    Critter(int hunger = 0);       // constructor prototype构造函数的声明与定义
     void Greet();
 };
 
