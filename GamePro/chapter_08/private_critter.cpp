@@ -40,9 +40,10 @@ void Critter::SetHunger(int hunger)
 }
 
 int main()
+
 {
     Critter crit(5);  
-    //cout << crit.m_Hunger; -- illegal, m_Hunger is private!
+    //cout << crit.m_Hunger; -- illegal, m_Hunger is private!;
     cout << "Calling GetHunger(): " << crit.GetHunger() << "\n\n";
    
     cout << "Calling SetHunger() with -1.\n";

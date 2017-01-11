@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Critter
+class Critter   //类的定义
 {
 public:          
     Critter(int hunger = 0, int boredom = 0); 
@@ -22,17 +22,17 @@ private:
 
 };
 
-Critter::Critter(int hunger, int boredom):
+Critter::Critter(int hunger, int boredom):   //类的构造函数
     m_Hunger(hunger),
     m_Boredom(boredom)
 {}
 
-inline int Critter::GetMood() const 
+inline int Critter::GetMood() const //GetMood 成员函数
 {
     return (m_Hunger + m_Boredom);
 }
 
-void Critter::PassTime(int time)
+void Critter::PassTime(int time)//PassTime 成员函数
 {
     m_Hunger += time;
     m_Boredom += time;
