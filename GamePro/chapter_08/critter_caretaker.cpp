@@ -38,7 +38,7 @@ void Critter::PassTime(int time)//PassTime 成员函数
     m_Boredom += time;
 }
 
-void Critter::Talk()
+void Critter::Talk()//Talk 成员函数
 {
     cout << "I'm a critter and I feel ";
 
@@ -63,7 +63,7 @@ void Critter::Talk()
     PassTime();
 }
 
-void Critter::Eat(int food) 
+void Critter::Eat(int food) //Eat 成员函数
 {
     cout << "Brruppp.\n";
 
@@ -76,7 +76,7 @@ void Critter::Eat(int food)
     PassTime();
 }
 
-void Critter::Play(int fun)
+void Critter::Play(int fun)//Play 成员函数
 {
     cout << "Wheee!\n";
 
@@ -89,7 +89,7 @@ void Critter::Play(int fun)
     PassTime();
 }
 
-int main()
+int main() //main 函数
 {
     Critter crit;
 
