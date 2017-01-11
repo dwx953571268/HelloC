@@ -89,7 +89,7 @@ void Critter::Play(int fun)//Play 成员函数
     PassTime();
 }
 
-int main() //main 函数
+int main() //
 {
     Critter crit;
 
