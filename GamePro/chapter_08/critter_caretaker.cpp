@@ -10,8 +10,8 @@ class Critter   //类的定义
 public:          
     Critter(int hunger = 0, int boredom = 0); 
     void Talk();
-    void Eat(int food = 4);
-    void Play(int fun = 4);
+    void Eat(int food = -1);
+    void Play(int fun = 1);
 
 private:
     int m_Hunger;
@@ -20,7 +20,7 @@ private:
     int GetMood() const;
     void PassTime(int time = 1);
 
-};
+};	
 
 Critter::Critter(int hunger, int boredom):   //类的构造函数
     m_Hunger(hunger),
