@@ -7,21 +7,20 @@
 
 using namespace std;
 
-class Critter
+class Critter//类的定义
 {
 public:
     Critter(const string& name = "");
-    string GetName() const;  
-    
+    string GetName() const;      
 private:
-    string m_Name;
+    string m_Name;//使用对象数据成员
 };
 
-Critter::Critter(const string& name):
+Critter::Critter(const string& name)://类的构造
     m_Name(name)
 {}
 
-inline string Critter::GetName() const 
+inline string Critter::GetName() const //构造函数
 {
     return m_Name;
 }
@@ -34,15 +33,15 @@ public:
     void RollCall() const;
     
 private:
-    vector<Critter> m_Critters;
+    vector<Critter> m_Critters;//容器成员函数
 };
 
-Farm::Farm(int spaces)
+Farm::Farm(int spaces)//调用farm的构造函数
 {
     m_Critters.reserve(spaces);
 }
-
-void Farm::Add(const Critter& aCritter)
+//
+void Farm::Add(const Critter& aCritter)//成员函数，接受指向critter对象的常量引用
 {
     m_Critters.push_back(aCritter);
 }
@@ -63,7 +62,7 @@ int main()
     cout << "My critter's name is " << crit.GetName() << endl; 
 
     cout << "\nCreating critter farm.\n";
-    Farm myFarm(3);
+    Farm myFarm(3);//新的Farm对象
     
     cout << "\nAdding three critters to the farm.\n";
     myFarm.Add(Critter("Moe"));
